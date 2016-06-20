@@ -8,4 +8,4 @@ http.createServer(function(req,res){
     res.writeHead(200, {'Content-Type': 'text/plain'});
     res.end('Hellow Law');
 
-}).listen(80, '50.112.80.119');
+}).listen(80, '50.112.52.56');
