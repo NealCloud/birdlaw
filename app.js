@@ -1,11 +1,17 @@
 /**
  * Created by Mad Martigan on 6/20/2016.
  */
-var http = require('http');
+const http = require('http');
 
-http.createServer(function(req,res){
+const hostname = '50.112.52.56';
+const port = 3000;
 
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Hellow Law');
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+res.setHeader('Content-Type', 'text/plain');
+res.end('Hello World\n');
+});
 
-}).listen(80, '50.112.52.56');
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+});
